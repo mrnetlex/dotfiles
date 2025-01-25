@@ -111,6 +111,9 @@ if status is-interactive
         starship init fish | source
         enable_transience
 
+        #atuin
+        atuin init fish | source
+
         #iotop fix
         export TERM=xterm-256color
 
