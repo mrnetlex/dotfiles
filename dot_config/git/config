@@ -1,0 +1,5 @@
+[user]
+	email = "mrnetlex@gmail.com"
+	name = "netlex"
+[init]
+	defaultBranch = "main"
