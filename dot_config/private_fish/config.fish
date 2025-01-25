@@ -3,6 +3,10 @@ if status is-interactive
 
     #Remove welcome message
     set fish_greeting
+
+    # Use Homebrew (needs to go first so things like zoxide and starship works later)
+
+    eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
     
     ## Useful aliases
 
@@ -158,6 +162,6 @@ if status is-interactive
         # Micro - more colors
             set MICRO_TRUECOLOR 1
 
-    #   run fetch
+    #   run fetch    
 fastfetch
     end
