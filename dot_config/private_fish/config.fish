@@ -96,7 +96,7 @@ if status is-interactive
 
             # CLI utilities        
         #default editor
-        export EDITOR micro
+        set -Ux EDITOR micro
         #zoxide 
         zoxide init fish | source
 
