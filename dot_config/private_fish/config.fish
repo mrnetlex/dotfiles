@@ -19,7 +19,7 @@ if status is-interactive
     alias ip="ip -color"
     
     # Replace some more things with better alternatives
-    alias cat='batcat --style header --style rules --style snip --style changes --style header'
+    alias cat='bat --style header --style snip --style changes'
     [ ! -x /usr/bin/yay ] && [ -x /usr/bin/paru ] && alias yay='paru'
  
     # Common use
@@ -49,6 +49,7 @@ if status is-interactive
     alias tp='trash-put'
     alias systui='systemctl-tui'
     alias lg='lazygit'
+    alias cz='chezmoi'
 
     # Get fastest mirrors
     alias mirror="sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist"
@@ -56,9 +57,13 @@ if status is-interactive
     alias mirrors="sudo reflector --latest 50 --number 20 --sort score --save /etc/pacman.d/mirrorlist"
     alias mirrora="sudo reflector --latest 50 --number 20 --sort age --save /etc/pacman.d/mirrorlist"
 
-    # Get my scripts
-
-    set -x PATH /home/netlex/bin $PATH
+    # Add /home/netlex/bin and all its subdirectories to PATH
+    # for dir in /home/netlex/bin /home/netlex/bin/*(/)
+        # if test -d $dir
+            # set -x PATH $dir $PATH
+        # end
+    # end
+    
         
     ## Functions
         # Functions needed for !! and !$ https://github.com/oh-my-fish/plugin-bang-bang
@@ -98,9 +103,12 @@ if status is-interactive
             cp $filename $filename.bak
         end
 
-            # CLI utilities        
-        #default editor
+        ########## CLI utilities        
+
+        #micro
         set -Ux EDITOR micro
+        set MICRO_TRUECOLOR 1 #better colors
+
         #zoxide 
         zoxide init fish | source
 
@@ -162,9 +170,6 @@ if status is-interactive
             set -g fish_pager_color_completion $foreground
             set -g fish_pager_color_description $comment
 
-        # Micro - more colors
-            set MICRO_TRUECOLOR 1
-
-    #   run fetch    
+    #run fetch    
 fastfetch
     end
