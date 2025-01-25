@@ -1,9 +1,9 @@
 {
-  "autosu": true,
-  "clipboard": "terminal",
-  "colorscheme": "simple",
-  "hlsearch": true,
-  "mkparents": true,
-  "savecursor": true,
-  "scrollbar": true
+    "autosu": true,
+    "clipboard": "terminal",
+    "colorscheme": "simple",
+    "hlsearch": true,
+    "mkparents": true,
+    "savecursor": true,
+    "scrollbar": true
 }
