@@ -171,5 +171,5 @@ if status is-interactive
             set -g fish_pager_color_description $comment
 
     #run fetch    
-fastfetch
+fastfetch --config /home/netlex/.config/fastfetch/full.jsonc
     end
