@@ -122,6 +122,11 @@ if status is-interactive
         #iotop fix
         export TERM=xterm-256color
 
+        #pyenv
+        pyenv init - fish | source
+        #pyenv-virtualenv
+        status --is-interactive; and pyenv virtualenv-init - | source
+
         #yazi
         function ya
              set tmp (mktemp -t "yazi-cwd.XXXXX")
@@ -178,7 +183,7 @@ if status is-interactive
             set -g fish_pager_color_description $comment
 
     #run fetch    
-fastfetch
+fastfetch --logo arch
     end
 
 
