@@ -7,6 +7,8 @@ if status is-interactive
     # Use Homebrew (needs to go first so things like zoxide and starship works later)
 
     eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+    set HOMEBREW_AUTO_UPDATE_SECS 86400
     
     ## Useful aliases
 
