@@ -1,7 +1,7 @@
-[manager]
+[mgr]
 show_hidden = true
 sort_by = "natural"
 sort_dir_first = true
 sort_reverse = false
-linemode = "size"
+linemode = "permissions"
 show_symlink = true
