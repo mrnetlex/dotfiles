@@ -3,3 +3,6 @@
 	name = "netlex"
 [init]
 	defaultBranch = "main"
+[safe]
+	directory = /home/netlex/docker/profilarr/db
+	directory = /home/netlex/docker/komodo/cache/git.netlexvault.com/netlex-docker-compose/main/latest
