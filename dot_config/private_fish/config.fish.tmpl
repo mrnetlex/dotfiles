@@ -28,7 +28,7 @@ if status is-interactive
     alias rmpkg="sudo pacman -Rdd"
     alias psmem='ps auxf | sort -nr -k 4'
     alias psmem10='ps auxf | sort -nr -k 4 | head -10'
-    alias upd='/usr/bin/update'
+    alias cd='z'
     alias ..='cd ..'
     alias ...='cd ../..'
     alias ....='cd ../../..'
@@ -190,6 +190,8 @@ fastfetch --logo arch
 
 {{ else }}
 
+
+
 if status is-interactive
     # Commands to run in interactive sessions can go here
 
@@ -225,7 +227,7 @@ if status is-interactive
     alias rmpkg="sudo pacman -Rdd"
     alias psmem='ps auxf | sort -nr -k 4'
     alias psmem10='ps auxf | sort -nr -k 4 | head -10'
-    alias upd='/usr/bin/update'
+    alias cd='z'
     alias ..='cd ..'
     alias ...='cd ../..'
     alias ....='cd ../../..'
@@ -234,9 +236,6 @@ if status is-interactive
     alias dir='dir --color=auto'
     alias vdir='vdir --color=auto'
     alias grep='rg'
-    alias grep='grep --color=auto'
-    alias fgrep='fgrep --color=auto'
-    alias egrep='egrep --color=auto'
     alias hw='hwinfo --short'                                   # Hardware Info
     alias big="expac -H M '%m\t%n' | sort -h | nl"              # Sort installed packages according to size in MB
     alias gitpkg='pacman -Q | grep -i "\-git" | wc -l'			# List amount of -git packages
@@ -320,7 +319,7 @@ if status is-interactive
         export TERM=xterm-256color
 
         #yazi
-        function ya
+        function y
              set tmp (mktemp -t "yazi-cwd.XXXXX")
              yazi $argv --cwd-file="$tmp"
              if set cwd (cat -- "$tmp"); and [ -n "$cwd" ]; and [ "$cwd" != "$PWD" ]
@@ -367,5 +366,7 @@ if status is-interactive
     #run fetch    
 fastfetch --config /home/netlex/.config/fastfetch/full.jsonc
     end
+
+
 
 {{ end }}
