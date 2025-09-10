@@ -14,11 +14,7 @@ if status is-interactive
     alias lt='eza -aT --color=always --group-directories-first --icons' # tree listing
     alias l.="eza -a | egrep '^\.'"                                     # show only dotfiles
     alias ip="ip -color"
-    
-    # Replace some more things with better alternatives
-    alias cat='bat --style header --style snip --style changes'
-    [ ! -x /usr/bin/yay ] && [ -x /usr/bin/paru ] && alias yay='paru'
- 
+     
     # Common use
     alias grubup="sudo update-grub"
     alias fixpacman="sudo rm /var/lib/pacman/db.lck"
@@ -34,8 +30,10 @@ if status is-interactive
     alias ....='cd ../../..'
     alias .....='cd ../../../..'
     alias ......='cd ../../../../..'
+    alias cat='bat --style header --style snip --style changes'
     alias dir='dir --color=auto'
     alias vdir='vdir --color=auto'
+    alias yay='paru'
     alias grep='rg'
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
@@ -185,6 +183,9 @@ if status is-interactive
 fastfetch --logo arch
     end
 
+
+
+
 {{ else if eq .chezmoi.hostname "oracle-flex" }}
 
 if status is-interactive
@@ -192,8 +193,6 @@ if status is-interactive
 
     #Remove welcome message
     set fish_greeting
-
-    set HOMEBREW_AUTO_UPDATE_SECS 86400
     
     ## Useful aliases
 
@@ -203,11 +202,7 @@ if status is-interactive
     alias ll='eza -l --color=always --group-directories-first --icons'  # long format
     alias lt='eza -aT --color=always --group-directories-first --icons' # tree listing
     alias l.="eza -a | egrep '^\.'"                                     # show only dotfiles
-    alias ip="ip -color"
     
-    # Replace some more things with better alternatives
-    alias cat='bat --style header --style snip --style changes'
-    [ ! -x /usr/bin/yay ] && [ -x /usr/bin/paru ] && alias yay='paru'
  
     # Common use
     alias grubup="sudo update-grub"
@@ -224,9 +219,11 @@ if status is-interactive
     alias ....='cd ../../..'
     alias .....='cd ../../../..'
     alias ......='cd ../../../../..'
+	alias cat='bat --style header --style snip --style changes'
     alias dir='dir --color=auto'
     alias vdir='vdir --color=auto'
     alias grep='rg'
+    alias ip='ip -color'
     alias hw='hwinfo --short'                                   # Hardware Info
     alias big="expac -H M '%m\t%n' | sort -h | nl"              # Sort installed packages according to size in MB
     alias gitpkg='pacman -Q | grep -i "\-git" | wc -l'			# List amount of -git packages
@@ -348,9 +345,9 @@ fastfetch --config /home/netlex/.config/fastfetch/full.jsonc
 
 
 
-{{ else }}
 
 
+{{ else if eq .chezmoi.hostname "q957" }}
 
 if status is-interactive
     # Commands to run in interactive sessions can go here
@@ -372,11 +369,7 @@ if status is-interactive
     alias ll='eza -l --color=always --group-directories-first --icons'  # long format
     alias lt='eza -aT --color=always --group-directories-first --icons' # tree listing
     alias l.="eza -a | egrep '^\.'"                                     # show only dotfiles
-    alias ip="ip -color"
     
-    # Replace some more things with better alternatives
-    alias cat='bat --style header --style snip --style changes'
-    [ ! -x /usr/bin/yay ] && [ -x /usr/bin/paru ] && alias yay='paru'
  
     # Common use
     alias grubup="sudo update-grub"
@@ -393,9 +386,11 @@ if status is-interactive
     alias ....='cd ../../..'
     alias .....='cd ../../../..'
     alias ......='cd ../../../../..'
+   	alias cat='bat --style header --style snip --style changes'
     alias dir='dir --color=auto'
     alias vdir='vdir --color=auto'
     alias grep='rg'
+    alias ip="ip -color"
     alias hw='hwinfo --short'                                   # Hardware Info
     alias big="expac -H M '%m\t%n' | sort -h | nl"              # Sort installed packages according to size in MB
     alias gitpkg='pacman -Q | grep -i "\-git" | wc -l'			# List amount of -git packages
