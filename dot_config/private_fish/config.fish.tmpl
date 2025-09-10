@@ -13,7 +13,6 @@ if status is-interactive
     alias ll='eza -l --color=always --group-directories-first --icons'  # long format
     alias lt='eza -aT --color=always --group-directories-first --icons' # tree listing
     alias l.="eza -a | egrep '^\.'"                                     # show only dotfiles
-    alias ip="ip -color"
      
     # Common use
     alias grubup="sudo update-grub"
@@ -31,6 +30,7 @@ if status is-interactive
     alias .....='cd ../../../..'
     alias ......='cd ../../../../..'
     alias cat='bat --style header --style snip --style changes'
+    alias ip="ip -color"
     alias dir='dir --color=auto'
     alias vdir='vdir --color=auto'
     alias yay='paru'
