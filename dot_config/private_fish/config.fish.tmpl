@@ -117,6 +117,9 @@ if status is-interactive
         source $HOME/.atuin/bin/env.fish
         atuin init fish | source
 
+        #pay-respects
+        pay-respects fish | source
+
         #iotop fix
         export TERM=xterm-256color
 
@@ -135,7 +138,7 @@ if status is-interactive
              rm -f -- "$tmp"
         end
 
-         #Flatpak fix
+        #Flatpak fix
          set -l xdg_data_home $XDG_DATA_HOME ~/.local/share
          set -gx --path XDG_DATA_DIRS $xdg_data_home[1]/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share
 
@@ -292,6 +295,9 @@ if status is-interactive
         #atuin
         source $HOME/.atuin/bin/env.fish
         atuin init fish | source
+
+        #pay-respects
+        pay-respects fish | source
 
         #iotop fix
         export TERM=xterm-256color
@@ -453,6 +459,9 @@ if status is-interactive
         #atuin
         source $HOME/.atuin/bin/env.fish
         atuin init fish | source
+
+        #pay-respects
+        pay-respects fish | source
 
         #iotop fix
         export TERM=xterm-256color
