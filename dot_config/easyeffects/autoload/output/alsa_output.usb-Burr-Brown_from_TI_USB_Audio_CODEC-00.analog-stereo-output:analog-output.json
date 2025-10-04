@@ -1,0 +1,6 @@
+{
+    "device": "alsa_output.usb-Burr-Brown_from_TI_USB_Audio_CODEC-00.analog-stereo-output",
+    "device-description": "BERHINGER UMC22 OUT",
+    "device-profile": "analog-output",
+    "preset-name": "DT990Pro"
+}
