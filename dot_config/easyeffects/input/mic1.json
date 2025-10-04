@@ -92,7 +92,7 @@
         ],
         "rnnoise#0": {
             "bypass": false,
-            "enable-vad": false,
+            "enable-vad": true,
             "input-gain": 0.0,
             "model-name": "",
             "output-gain": 0.0,
