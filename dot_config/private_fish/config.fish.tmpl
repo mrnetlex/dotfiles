@@ -189,9 +189,8 @@ if status is-interactive
 		  --info=inline-right
 		  --ansi
 		  --layout=reverse
-		  --border=none
-		  --color=bg+:#283457
-		  --color=bg:#16161e
+		  --border
+		  --height 60%
 		  --color=border:#27a1b9
 		  --color=fg:#c0caf5
 		  --color=gutter:#16161e
@@ -207,7 +206,8 @@ if status is-interactive
 		  --color=separator:#ff9e64
 		  --color=spinner:#ff007c
 		"
-
+		set -x fzf_preview_dir_cmd eza --all --color=always
+		
     #run fetch    
 fastfetch --logo arch
     end
@@ -373,6 +373,32 @@ if status is-interactive
 		set -g fish_pager_color_completion $foreground
 		set -g fish_pager_color_description $comment
 		set -g fish_pager_color_selected_background --background=$selection
+
+		# fzf
+		set -x FZF_DEFAULT_OPTS "
+		  --highlight-line
+		  --info=inline-right
+		  --ansi
+		  --layout=reverse
+		  --border=none
+		  --color=bg+:#283457
+		  --color=bg:#16161e
+		  --color=border:#27a1b9
+		  --color=fg:#c0caf5
+		  --color=gutter:#16161e
+		  --color=header:#ff9e64
+		  --color=hl+:#2ac3de
+		  --color=hl:#2ac3de
+		  --color=info:#545c7e
+		  --color=marker:#ff007c
+		  --color=pointer:#ff007c
+		  --color=prompt:#2ac3de
+		  --color=query:#c0caf5:regular
+		  --color=scrollbar:#27a1b9
+		  --color=separator:#ff9e64
+		  --color=spinner:#ff007c
+		"
+		
     #run fetch    
 fastfetch --config /home/netlex/.config/fastfetch/full.jsonc
     end
@@ -563,7 +589,7 @@ if status is-interactive
 		  --color=separator:#ff9e64
 		  --color=spinner:#ff007c
 		"
-
+				
     #run fetch    
 fastfetch --config /home/netlex/.config/fastfetch/full.jsonc
     end
